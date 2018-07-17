@@ -1,17 +1,17 @@
-### Insight Data Engineer Pharmacy Counting Challenge
+## Insight Data Engineer Pharmacy Counting Challenge
 
 #### Python standard libraries used - 
 
-- csv:
+- csv:  
   To read and process the input file.
 
-- time:
+- time:  
   To track time spent in each step.
 
-- collections/defaultdict:
+- collections/defaultdict:  
   Instead of the default 'dict' object, I used 'defaultdict' to store prescriber and drug cost information for each unique drug.
 
-- itertools/chain:
+- itertools/chain:  
   To merge 2 defaultdict objects into the final drug table.
 
 
@@ -27,15 +27,17 @@ In addition to the first (read and test input file) and the last (write and test
 
 #### Environment - 
 
-Sierra v.10.12.6
-MacBook Air mid 2011 
-Processor 1.7 GHz Intel Core i5
-Memory 4 GB 1333 MHz DDR3
+Sierra v.10.12.6  
+MacBook Air mid 2011  
+Processor 1.7 GHz Intel Core i5  
+Memory 4 GB 1333 MHz DDR3  
 
 
 #### Performance test - 
 
-I tested the code with input data of 5, 1k, and 100k records.  All three tests finished within a reasonable timeframe.  I also tried the 24.5m records dataset, but it failed to finish in 20 minutes.  From the time log below, we can see that step 2 "prescriber number count" took the longest, followed by step 1 “data preparation”.  To further improve performance when using large datasets, we can find more efficient ways to read in the raw data, and/or to store prescriber information for each drug.  Going forward, we can also try to split large dataset for parallel computing and run the code on environments with better hardware specs.
+I tested the code with input data of 5, 1k, and 100k records.  All three tests finished within a reasonable timeframe.  I also tried the 24.5m records dataset, but it failed to finish in 20 minutes.  From the time log below, we can see that step 2 "prescriber number count" took the longest, followed by step 1 “data preparation”.  
+
+To further improve performance when using large datasets, we can find more efficient ways to read in the raw data, and/or to store prescriber information for each drug.  Going forward, we can also try to split large dataset for parallel computing and run the code on environments with better hardware specs.
 
     - 5 records:
     > Data preparation took 0.0 seconds to run!
