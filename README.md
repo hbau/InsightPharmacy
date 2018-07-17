@@ -1,5 +1,7 @@
 ## Insight Data Engineer Pharmacy Counting Challenge
 
+The script 'run.sh' executes 'pharmacy_count.py' in the 'src' folder and creates 'top_cost_drug.txt' in the 'output' folder.
+
 #### Python standard libraries used - 
 
 - csv:  
@@ -12,7 +14,7 @@
   Instead of the default 'dict' object, I used 'defaultdict' to store prescriber and drug cost information for each unique drug.
 
 - itertools/chain:  
-  To merge 2 defaultdict objects into the final drug table.
+  To merge 2 defaultdict objects into the final drug table list.
 
 
 #### pharmacy_count.py - 
@@ -22,7 +24,7 @@ In addition to the first (read and test input file) and the last (write and test
     1. Data preparation and cleaning to create a sorted [drug_name, prescriber_name, drug_cost] list
     2. Calculate number of unique prescribers for each drug {dict with drug_name as the key}
     3. Calculate total cost for each drug {dict with drug_name as the key}
-    4. Combine two dictionaries and sort the final drug table
+    4. Combine two dictionaries and sort the final drug table as list [drug_table_sorted]
 
 
 #### Environment - 
