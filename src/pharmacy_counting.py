@@ -13,7 +13,6 @@ except IOError as e:
     print('File does not exist or no permissions.')
     exit()
 
-
 '''
 Data preparing and cleaning:
 
@@ -25,7 +24,6 @@ columns: [drug_name, prescriber_name(last+first, upper-cased), drug_cost]
 rows: sorted by drug_name then by prescriber_name
 '''
 start_time = time.time()
-
 input_records=[]
 
 for records in input_file:
@@ -120,7 +118,7 @@ print ('Final sorted table took {0} seconds to run!'.format(round((table_time - 
 output_header = ['drug_name', 'num_prescriber', 'total_cost']
 
 try:
-    with open('./output/top_cost_drug.txt', 'w', newline='') as f:
+    with open('./output/top_cost_drug.txt', 'w') as f:
         output_file = csv.writer(f)
         output_file.writerow(output_header)
         for i in range(len(drug_table_sorted)):
