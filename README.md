@@ -4,7 +4,7 @@ The script `run.sh` executes `pharmacy_count.py` in the `src` folder and creates
 
 #### Python standard libraries used - 
 
-- sys:
+- sys:  
   To get file directory arguments from `run.sh`.
 
 - csv:  
