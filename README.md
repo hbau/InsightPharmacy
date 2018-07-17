@@ -1,6 +1,6 @@
 ## Insight Data Engineer Pharmacy Counting Challenge
 
-The script 'run.sh' executes 'pharmacy_count.py' in the 'src' folder and creates 'top_cost_drug.txt' in the 'output' folder.
+The script `run.sh` executes `pharmacy_count.py` in the `src` folder and creates `top_cost_drug.txt` in the `output` folder.
 
 #### Python standard libraries used - 
 
