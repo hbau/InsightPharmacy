@@ -122,7 +122,7 @@ try:
         output_file = csv.writer(f)
         output_file.writerow(output_header)
         for i in range(len(drug_table_sorted)):
-            output_file.writerow([drug_table_sorted[i][0],(drug_table_sorted[i][1][0]),round(drug_table_sorted[i][1][1])])
+            output_file.writerow([drug_table_sorted[i][0],(drug_table_sorted[i][1][0]),int(round(drug_table_sorted[i][1][1]))])
 except IOError as e:
     print('No permission to write file.')
     exit()
