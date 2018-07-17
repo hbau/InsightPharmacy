@@ -1,11 +1,15 @@
+import sys
 import csv
 import time
 from collections import defaultdict
 from itertools import chain
 
 # import raw data into input_file
+in_file = sys.argv[1]
+out_file = sys.argv[2]
+
 try:
-    with open("./input/itcont.txt") as f:
+    with open(in_file) as f:
         input_file = csv.reader(f)
         header = next(input_file) # skip header
         input_file = list(input_file)
@@ -118,7 +122,7 @@ print ('Final sorted table took {0} seconds to run!'.format(round((table_time - 
 output_header = ['drug_name', 'num_prescriber', 'total_cost']
 
 try:
-    with open('./output/top_cost_drug.txt', 'w') as f:
+    with open(out_file, 'w') as f:
         output_file = csv.writer(f)
         output_file.writerow(output_header)
         for i in range(len(drug_table_sorted)):
