@@ -26,7 +26,7 @@ In addition to the first (read and test input file) and the last (write and test
 
     1. Data preparation and cleaning to create a sorted [drug_name, prescriber_name, drug_cost] list
     2. Calculate number of unique prescribers for each drug {dict with drug_name as the key}
-    3. Calculate total cost for each drug {dict with drug_name as the key}
+    3. Calculate total cost for each drug {dict with drug_name as the key}.  Test drug_cost values and set invalid (non-float/int) or missing entries to 0.    
     4. Combine two dictionaries and sort the final drug table as list [drug_table_sorted]
 
 
